@@ -69,6 +69,42 @@ body {
     100% { transform: translate(40px, 30px) scale(1.1); }
 }
 
+/* --- FLORES DE FONDO DECORATIVAS --- */
+.floral-bg {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+    transition: var(--transition-smooth);
+    animation: bloomIn 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.floral-top-left {
+    top: -40px;
+    left: -40px;
+    width: 320px;
+    height: auto;
+}
+
+.floral-bottom-right {
+    bottom: -40px;
+    right: -40px;
+    width: 320px;
+    height: auto;
+}
+
+@keyframes bloomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) rotate(-3deg);
+    }
+    to {
+        opacity: 0.85;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
 /* --- CONTENEDOR PRINCIPAL --- */
 .container {
     width: 100%;
@@ -337,5 +373,17 @@ body {
     
     .brand-title {
         font-size: 1.8rem;
+    }
+
+    .floral-top-left {
+        width: 180px;
+        top: -20px;
+        left: -20px;
+    }
+    
+    .floral-bottom-right {
+        width: 180px;
+        bottom: -20px;
+        right: -20px;
     }
 }

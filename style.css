@@ -179,6 +179,17 @@ body {
     text-transform: uppercase;
 }
 
+.greeting {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--color-accent);
+    margin-top: 12px;
+    min-height: 1.2em;
+    opacity: 0;
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
 /* --- SECCIÓN DE ENLACES --- */
 .links-section {
     margin-bottom: 36px;
@@ -226,11 +237,27 @@ body {
     transition: var(--transition-smooth);
 }
 
+/* Entrada escalonada de las tarjetas */
+.links-grid .link-card {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.links-grid .link-card:nth-child(1) { animation-delay: 0.25s; }
+.links-grid .link-card:nth-child(2) { animation-delay: 0.4s; }
+.links-grid .link-card:nth-child(3) { animation-delay: 0.55s; }
+
 .link-card:hover {
     transform: translateY(-4px);
     background: white;
     border-color: var(--color-accent);
     box-shadow: var(--shadow-hover);
+}
+
+.link-card:focus-visible,
+.social-btn:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
 }
 
 .card-icon {
@@ -358,6 +385,17 @@ body {
     font-size: 0.7rem;
     color: var(--color-text-muted);
     letter-spacing: 0.5px;
+}
+
+/* --- ACCESIBILIDAD: MOVIMIENTO REDUCIDO --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* --- RESPONSIVIDAD --- */

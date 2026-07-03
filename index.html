@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D'Flor Flowers Boutique | Enlaces Oficiales</title>
     <meta name="description" content="Encuentra todos los enlaces oficiales de D'Flor Flowers Boutique. Visita nuestras tiendas online de flores locales en Puerto Rico.">
+    <meta name="theme-color" content="#FAF6F0">
+    <!-- Open Graph: vista previa al compartir en WhatsApp, Instagram, etc. -->
+    <meta property="og:title" content="D'Flor Flowers Boutique | Enlaces Oficiales">
+    <meta property="og:description" content="Flores frescas, arreglos exclusivos y entrega el mismo día en Puerto Rico.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="DFlor Flower logo.png">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
     <!-- Google Fonts: Playfair Display (Serif Elegante) y Montserrat (Sans-Serif Moderna) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +26,8 @@
     <div class="bg-glow bg-glow-2"></div>
 
     <!-- Flores decorativas en las esquinas -->
-    <img src="floral_top_left.png" alt="" class="floral-bg floral-top-left">
-    <img src="floral_bottom_right.png" alt="" class="floral-bg floral-bottom-right">
+    <img src="floral_top_left.png" alt="" aria-hidden="true" decoding="async" class="floral-bg floral-top-left">
+    <img src="floral_bottom_right.png" alt="" aria-hidden="true" decoding="async" class="floral-bg floral-bottom-right">
 
     <div class="container">
         <!-- Encabezado / Logo -->
@@ -31,6 +38,7 @@
             </div>
             <h1 class="brand-title">D'Flor Flowers</h1>
             <p class="brand-subtitle">Boutique de Flores de Alta Costura & Diseños Florales</p>
+            <p class="greeting" id="greeting"></p>
         </header>
 
         <!-- Sección de enlaces -->
@@ -39,7 +47,7 @@
             
             <div class="links-grid">
                 <!-- Enlace 1: D'Flor Boutique -->
-                <a href="https://dflorflowersboutique.com" target="_blank" class="link-card" id="link-boutique">
+                <a href="https://dflorflowersboutique.com" target="_blank" rel="noopener noreferrer" class="link-card" id="link-boutique">
                     <div class="card-icon">
                         <i class="fa-solid fa-gem"></i>
                     </div>
@@ -53,7 +61,7 @@
                 </a>
 
                 <!-- Enlace 2: D'Flor Principal -->
-                <a href="https://dflor.com" target="_blank" class="link-card" id="link-dflor">
+                <a href="https://dflor.com" target="_blank" rel="noopener noreferrer" class="link-card" id="link-dflor">
                     <div class="card-icon">
                         <i class="fa-solid fa-shop"></i>
                     </div>
@@ -67,7 +75,7 @@
                 </a>
 
                 <!-- Enlace 3: Puerto Rico Local Florist -->
-                <a href="https://puertoricolocalflorist.com" target="_blank" class="link-card" id="link-prflorist">
+                <a href="https://puertoricolocalflorist.com" target="_blank" rel="noopener noreferrer" class="link-card" id="link-prflorist">
                     <div class="card-icon">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
@@ -86,21 +94,21 @@
         <section class="contact-section">
             <h2 class="section-title-small">Contacto Directo</h2>
             <div class="social-icons">
-                <a href="https://wa.me/17873702009" target="_blank" class="social-btn whatsapp" id="btn-whatsapp" title="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
+                <a href="https://wa.me/17873702009" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" id="btn-whatsapp" title="WhatsApp" aria-label="Escríbenos por WhatsApp">
+                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.instagram.com/dflorflowers/" target="_blank" class="social-btn instagram" id="btn-instagram" title="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/dflorflowers/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" id="btn-instagram" title="Instagram" aria-label="Síguenos en Instagram">
+                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:info@dflor.com" class="social-btn email" id="btn-email" title="Correo Electrónico">
-                    <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:info@dflor.com" class="social-btn email" id="btn-email" title="Correo Electrónico" aria-label="Envíanos un correo electrónico">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 </a>
             </div>
         </section>
 
         <!-- Pie de página -->
         <footer class="footer">
-            <p>&copy; 2026 D'Flor Flowers Boutique. Todos los derechos reservados.</p>
+            <p>&copy; <span id="year">2026</span> D'Flor Flowers Boutique. Todos los derechos reservados.</p>
         </footer>
     </div>
 

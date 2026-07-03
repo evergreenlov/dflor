@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dflor-landing",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": ["-c", "cd '/private/tmp/claude-501/-Volumes-MYRIAM-SEAG-D-FlorFlower-dflor/ab3dd6aa-0a94-4db1-a93e-3f6d2087912c/scratchpad/site' && exec /usr/bin/python3 -m http.server 8765"],
+      "port": 8765
+    }
+  ]
+}

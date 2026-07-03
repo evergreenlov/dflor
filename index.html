@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D'Flor Flowers Boutique | Enlaces Oficiales</title>
     <meta name="description" content="Encuentra todos los enlaces oficiales de D'Flor Flowers Boutique. Visita nuestras tiendas online de flores locales en Puerto Rico.">
-    <meta name="theme-color" content="#FAF6F0">
+    <meta name="theme-color" content="#FBF1EC">
     <!-- Open Graph: vista previa al compartir en WhatsApp, Instagram, etc. -->
     <meta property="og:title" content="D'Flor Flowers Boutique | Enlaces Oficiales">
     <meta property="og:description" content="Flores frescas, arreglos exclusivos y entrega el mismo día en Puerto Rico.">
@@ -24,27 +24,46 @@
     <!-- Fondo decorativo con gradientes suaves -->
     <div class="bg-glow bg-glow-1"></div>
     <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
 
-    <!-- Flores decorativas en las esquinas -->
-    <img src="floral_top_left.png" alt="" aria-hidden="true" decoding="async" class="floral-bg floral-top-left">
-    <img src="floral_bottom_right.png" alt="" aria-hidden="true" decoding="async" class="floral-bg floral-bottom-right">
-
-    <div class="container">
-        <!-- Encabezado / Logo -->
-        <header class="header">
+    <div class="page">
+        <!-- Panel de marca: logo, nombre y contacto -->
+        <header class="brand-panel">
             <div class="logo-container">
-                <!-- Intentamos cargar el logo SVG oficial o PNG -->
                 <img src="D'Flor Flower Logo SVG.svg" alt="D'Flor Flowers Logo" class="logo" onerror="this.onerror=null; this.src='DFlor Flower logo.png';">
             </div>
             <h1 class="brand-title">D'Flor Flowers</h1>
+            <!-- Adorno floral dorado -->
+            <svg class="flourish" viewBox="0 0 220 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M10 15 Q 60 5, 105 15" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                <path d="M210 15 Q 160 5, 115 15" fill="none" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="110" cy="15" r="3" fill="currentColor"/>
+                <path d="M45 12 q 4 -8 10 -6 q -2 8 -10 6 Z" fill="currentColor" opacity="0.7"/>
+                <path d="M175 12 q -4 -8 -10 -6 q 2 8 10 6 Z" fill="currentColor" opacity="0.7"/>
+            </svg>
             <p class="brand-subtitle">Boutique de Flores de Alta Costura & Diseños Florales</p>
             <p class="greeting" id="greeting"></p>
+
+            <div class="contact-section">
+                <h2 class="section-title-small">Contacto Directo</h2>
+                <div class="social-icons">
+                    <a href="https://wa.me/17873702009" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" id="btn-whatsapp" title="WhatsApp" aria-label="Escríbenos por WhatsApp">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.instagram.com/dflorflowers/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" id="btn-instagram" title="Instagram" aria-label="Síguenos en Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:info@dflor.com" class="social-btn email" id="btn-email" title="Correo Electrónico" aria-label="Envíanos un correo electrónico">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
         </header>
 
-        <!-- Sección de enlaces -->
-        <main class="links-section">
+        <!-- Panel de enlaces -->
+        <main class="links-panel">
             <h2 class="section-title">Nuestras Tiendas Online</h2>
-            
+
             <div class="links-grid">
                 <!-- Enlace 1: D'Flor Boutique -->
                 <a href="https://dflorflowersboutique.com" target="_blank" rel="noopener noreferrer" class="link-card" id="link-boutique">
@@ -89,22 +108,6 @@
                 </a>
             </div>
         </main>
-
-        <!-- Redes sociales y contacto rápido -->
-        <section class="contact-section">
-            <h2 class="section-title-small">Contacto Directo</h2>
-            <div class="social-icons">
-                <a href="https://wa.me/17873702009" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" id="btn-whatsapp" title="WhatsApp" aria-label="Escríbenos por WhatsApp">
-                    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.instagram.com/dflorflowers/" target="_blank" rel="noopener noreferrer" class="social-btn instagram" id="btn-instagram" title="Instagram" aria-label="Síguenos en Instagram">
-                    <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="mailto:info@dflor.com" class="social-btn email" id="btn-email" title="Correo Electrónico" aria-label="Envíanos un correo electrónico">
-                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                </a>
-            </div>
-        </section>
 
         <!-- Pie de página -->
         <footer class="footer">

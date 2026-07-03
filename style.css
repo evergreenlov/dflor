@@ -1,17 +1,17 @@
-/* --- SISTEMA DE DISEÑO PREMIUM D'FLOR --- */
+/* --- SISTEMA DE DISEÑO ROMÁNTICO D'FLOR --- */
 
 :root {
-    --color-bg-base: #FAF6F0;
-    --color-primary: #2C4E3F;      /* Sage / Forest Green Elegante */
-    --color-accent: #C88E8B;       /* Dusty Rose / Rosa Viejo */
-    --color-gold: #D4AF37;         /* Antique Gold */
-    --color-gold-hover: #AA8B1E;
-    --color-text-dark: #2A2421;    /* Charcoal Cálido */
-    --color-text-muted: #6B5E59;   /* Café Grisáceo Suave */
-    --color-card-bg: rgba(255, 255, 255, 0.75);
-    --color-card-border: rgba(212, 175, 55, 0.2); /* Borde dorado translúcido */
-    --shadow-premium: 0 10px 30px -10px rgba(44, 78, 63, 0.12);
-    --shadow-hover: 0 20px 40px -15px rgba(200, 142, 139, 0.25);
+    --color-bg-1: #FBF1EC;         /* Blush Claro */
+    --color-bg-2: #F3DAD3;         /* Rosa Empolvado */
+    --color-primary: #6E2639;      /* Vino / Burdeos Elegante */
+    --color-accent: #C4788A;       /* Rosa Antiguo */
+    --color-gold: #C9A24B;         /* Dorado Champán */
+    --color-text-dark: #3A2228;    /* Marrón Vino Oscuro */
+    --color-text-muted: #8A6670;   /* Malva Suave */
+    --color-card-bg: rgba(255, 255, 255, 0.85);
+    --color-card-border: rgba(201, 162, 75, 0.25);
+    --shadow-premium: 0 12px 32px -12px rgba(110, 38, 57, 0.18);
+    --shadow-hover: 0 22px 44px -16px rgba(110, 38, 57, 0.3);
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -24,7 +24,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--color-bg-base);
+    background: linear-gradient(160deg, var(--color-bg-1) 0%, var(--color-bg-2) 55%, #EFCEC9 100%);
+    background-attachment: fixed;
     color: var(--color-text-dark);
     min-height: 100vh;
     display: flex;
@@ -32,90 +33,61 @@ body {
     align-items: center;
     position: relative;
     overflow-x: hidden;
-    padding: 20px;
+    padding: 24px;
     line-height: 1.5;
 }
 
 /* --- EFECTOS DE FONDO (GLOW ORBS) --- */
 .bg-glow {
-    position: absolute;
+    position: fixed;
     border-radius: 50%;
-    filter: blur(120px);
+    filter: blur(110px);
     z-index: -1;
-    opacity: 0.4;
+    opacity: 0.55;
     pointer-events: none;
 }
 
 .bg-glow-1 {
-    width: 350px;
-    height: 350px;
-    background-color: #EED7D5;
-    top: -50px;
-    left: -100px;
-    animation: floatGlow 12s infinite alternate ease-in-out;
+    width: 480px;
+    height: 480px;
+    background-color: #F2C4BB;
+    top: -120px;
+    left: -140px;
+    animation: floatGlow 14s infinite alternate ease-in-out;
 }
 
 .bg-glow-2 {
-    width: 400px;
-    height: 400px;
-    background-color: #D3E0DC;
-    bottom: -100px;
-    right: -100px;
-    animation: floatGlow 16s infinite alternate-reverse ease-in-out;
+    width: 520px;
+    height: 520px;
+    background-color: #E7B9C6;
+    bottom: -160px;
+    right: -140px;
+    animation: floatGlow 18s infinite alternate-reverse ease-in-out;
+}
+
+.bg-glow-3 {
+    width: 380px;
+    height: 380px;
+    background-color: #EEDBB6;
+    top: 40%;
+    left: 55%;
+    opacity: 0.35;
+    animation: floatGlow 22s infinite alternate ease-in-out;
 }
 
 @keyframes floatGlow {
     0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(40px, 30px) scale(1.1); }
+    100% { transform: translate(50px, 35px) scale(1.12); }
 }
 
-/* --- FLORES DE FONDO DECORATIVAS --- */
-.floral-bg {
-    position: fixed;
-    z-index: -1;
-    pointer-events: none;
-    mix-blend-mode: multiply;
-    opacity: 0.85;
-    transition: var(--transition-smooth);
-    animation: bloomIn 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.floral-top-left {
-    top: -40px;
-    left: -40px;
-    width: 320px;
-    height: auto;
-}
-
-.floral-bottom-right {
-    bottom: -40px;
-    right: -40px;
-    width: 320px;
-    height: auto;
-}
-
-@keyframes bloomIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9) rotate(-3deg);
-    }
-    to {
-        opacity: 0.85;
-        transform: scale(1) rotate(0deg);
-    }
-}
-
-/* --- CONTENEDOR PRINCIPAL --- */
-.container {
+/* --- DISEÑO DE PÁGINA: DOS COLUMNAS EN ESCRITORIO --- */
+.page {
     width: 100%;
-    max-width: 480px;
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 32px;
-    padding: 40px 24px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
     text-align: center;
     animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -131,29 +103,30 @@ body {
     }
 }
 
-/* --- ENCABEZADO --- */
-.header {
-    margin-bottom: 36px;
+/* --- PANEL DE MARCA --- */
+.brand-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo-container {
-    width: 110px;
-    height: 110px;
-    margin: 0 auto 20px;
+    width: 180px;
+    height: 180px;
+    margin-bottom: 24px;
     border-radius: 50%;
     background: white;
-    padding: 12px;
-    box-shadow: var(--shadow-premium);
+    padding: 18px;
+    box-shadow: var(--shadow-premium), 0 0 0 6px rgba(255, 255, 255, 0.5), 0 0 0 7px rgba(201, 162, 75, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(212, 175, 55, 0.15);
     transition: var(--transition-smooth);
 }
 
 .logo-container:hover {
-    transform: scale(1.05) rotate(2deg);
-    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+    transform: scale(1.04) rotate(2deg);
+    box-shadow: var(--shadow-hover), 0 0 0 6px rgba(255, 255, 255, 0.6), 0 0 0 7px rgba(201, 162, 75, 0.5);
 }
 
 .logo {
@@ -164,43 +137,109 @@ body {
 
 .brand-title {
     font-family: 'Playfair Display', serif;
-    font-size: 2.3rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 600;
     color: var(--color-primary);
-    margin-bottom: 8px;
     letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.flourish {
+    width: 200px;
+    height: 28px;
+    color: var(--color-gold);
+    margin: 10px auto 12px;
 }
 
 .brand-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     color: var(--color-text-muted);
     font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
+    max-width: 340px;
 }
 
 .greeting {
     font-family: 'Playfair Display', serif;
     font-style: italic;
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     color: var(--color-accent);
-    margin-top: 12px;
+    margin-top: 16px;
     min-height: 1.2em;
     opacity: 0;
     animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
 }
 
-/* --- SECCIÓN DE ENLACES --- */
-.links-section {
-    margin-bottom: 36px;
+/* --- CONTACTO Y REDES SOCIALES --- */
+.contact-section {
+    margin-top: 32px;
 }
 
+.section-title-small {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    box-shadow: 0 6px 14px rgba(110, 38, 57, 0.15);
+}
+
+.social-btn.whatsapp {
+    background-color: #25D366;
+}
+
+.social-btn.whatsapp:hover {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 8px 18px rgba(37, 211, 102, 0.35);
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn.instagram:hover {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 8px 18px rgba(220, 39, 67, 0.35);
+}
+
+.social-btn.email {
+    background-color: var(--color-primary);
+}
+
+.social-btn.email:hover {
+    transform: translateY(-3px) scale(1.08);
+    background-color: var(--color-accent);
+    box-shadow: 0 8px 18px rgba(196, 120, 138, 0.4);
+}
+
+/* --- PANEL DE ENLACES --- */
 .section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     font-style: italic;
-    color: var(--color-text-muted);
-    margin-bottom: 20px;
+    color: var(--color-primary);
+    margin-bottom: 24px;
     position: relative;
 }
 
@@ -208,18 +247,18 @@ body {
 .section-title::after {
     content: "";
     display: inline-block;
-    width: 30px;
+    width: 34px;
     height: 1px;
     background-color: var(--color-gold);
     vertical-align: middle;
-    margin: 0 12px;
-    opacity: 0.5;
+    margin: 0 14px;
+    opacity: 0.6;
 }
 
 .links-grid {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
 
 /* --- TARJETAS DE ENLACE (LINK CARDS) --- */
@@ -227,18 +266,16 @@ body {
     display: flex;
     align-items: center;
     background: var(--color-card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--color-card-border);
-    border-radius: 20px;
-    padding: 16px 20px;
+    border-radius: 22px;
+    padding: 20px 24px;
     text-decoration: none;
     color: inherit;
     text-align: left;
     box-shadow: var(--shadow-premium);
     transition: var(--transition-smooth);
-}
-
-/* Entrada escalonada de las tarjetas */
-.links-grid .link-card {
     opacity: 0;
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -261,16 +298,16 @@ body {
 }
 
 .card-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    background: rgba(44, 78, 63, 0.06);
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: rgba(110, 38, 57, 0.07);
     color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    margin-right: 16px;
+    font-size: 1.3rem;
+    margin-right: 18px;
     flex-shrink: 0;
     transition: var(--transition-smooth);
 }
@@ -287,23 +324,23 @@ body {
 
 .card-content h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-text-dark);
     margin-bottom: 4px;
 }
 
 .card-content p {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--color-text-muted);
-    font-weight: 300;
-    line-height: 1.35;
+    font-weight: 400;
+    line-height: 1.4;
 }
 
 .card-arrow {
     color: var(--color-gold);
-    font-size: 0.9rem;
-    margin-left: 12px;
+    font-size: 0.95rem;
+    margin-left: 14px;
     transition: var(--transition-smooth);
 }
 
@@ -312,77 +349,16 @@ body {
     color: var(--color-accent);
 }
 
-/* --- CONTACTO Y REDES SOCIALES --- */
-.contact-section {
-    margin-bottom: 24px;
-}
-
-.section-title-small {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 16px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}
-
-.social-btn {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: white;
-    text-decoration: none;
-    transition: var(--transition-smooth);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.social-btn.whatsapp {
-    background-color: #25D366;
-}
-
-.social-btn.whatsapp:hover {
-    transform: translateY(-3px) scale(1.08);
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
-}
-
-.social-btn.instagram {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-}
-
-.social-btn.instagram:hover {
-    transform: translateY(-3px) scale(1.08);
-    box-shadow: 0 6px 15px rgba(220, 39, 67, 0.3);
-}
-
-.social-btn.email {
-    background-color: var(--color-primary);
-}
-
-.social-btn.email:hover {
-    transform: translateY(-3px) scale(1.08);
-    background-color: var(--color-accent);
-    box-shadow: 0 6px 15px rgba(200, 142, 139, 0.3);
-}
-
 /* --- PIE DE PÁGINA --- */
 .footer {
-    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(201, 162, 75, 0.3);
     padding-top: 20px;
-    margin-top: 20px;
+    margin-top: 8px;
 }
 
 .footer p {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     color: var(--color-text-muted);
     letter-spacing: 0.5px;
 }
@@ -398,30 +374,49 @@ body {
     }
 }
 
-/* --- RESPONSIVIDAD --- */
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-    
-    .container {
-        padding: 30px 16px;
-        border-radius: 24px;
-    }
-    
-    .brand-title {
-        font-size: 1.8rem;
+/* --- ESCRITORIO: DOS COLUMNAS --- */
+@media (min-width: 900px) {
+    .page {
+        grid-template-columns: 5fr 6fr;
+        gap: 72px;
+        padding: 40px 0;
     }
 
-    .floral-top-left {
-        width: 180px;
-        top: -20px;
-        left: -20px;
+    .logo-container {
+        width: 210px;
+        height: 210px;
     }
-    
-    .floral-bottom-right {
-        width: 180px;
-        bottom: -20px;
-        right: -20px;
+
+    .brand-title {
+        font-size: 3.4rem;
+    }
+
+    .links-panel {
+        text-align: left;
+    }
+
+    .section-title::before {
+        display: none;
+    }
+}
+
+/* --- MÓVIL --- */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .logo-container {
+        width: 140px;
+        height: 140px;
+        padding: 14px;
+    }
+
+    .brand-title {
+        font-size: 2.2rem;
+    }
+
+    .link-card {
+        padding: 16px 18px;
     }
 }
